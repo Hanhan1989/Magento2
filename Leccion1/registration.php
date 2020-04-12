@@ -8,7 +8,7 @@
  *  const LANGUAGE = 'language';
  *  const SETUP = 'setup';
  * 
- * El método estático register registra el tipo de componente con su nombre y ruta completa para llegar al componente.
+ * El método estático register registra el tipo de componente con su nombre y ruta completa para llegar al componente(__DIR__).
  */
 
     \Magento\Framework\Component\ComponentRegistrar::register(
@@ -18,14 +18,15 @@
     );
 
 /**
- * Mirar el código de la clase ComponentRegistrar
+ * Mirar el código de la clase \Magento\Framework\Component\ComponentRegistrar
  * 
  * La clase ComponentRegistrar implementa a la interfaz ComponentRegistrarInterface que tiene 2 métodos , que la clase
  * está obligada a implementar. 
  * 
  * El ComponentRegistrar tiene un atributo estático privado del tipo array asociativo de elementos con valores array.
  * Este atributo estático $paths , su contexto es a nivel de clase, no a nivel de objeto. Así, cuando Magento ejecuta un montón 
- * de módulos, los datos sobre los módulos, themes... quedan compartidos para toda la aplicación. 
+ * de módulos, los datos sobre los módulos, themes... quedan compartidos para toda la aplicación.
+ * Así los módulos de magento que están en el vendor, también quedarán registrados en el sistema.
  *    private static $paths = [
  *      self::MODULE => [],
  *      self::LIBRARY => [],
@@ -36,6 +37,8 @@
  * 
  * Es decir si ejecutamos self::$paths[x][xx], estamos buscando valor entre todos los componentes. 
  */
+
+
 
 
 
