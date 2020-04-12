@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="standard">
+        <!--Este id será el nombre del fichero en la carpeta view/frontend/layout/leccion2id_index_ejemplo -->
+        <!--index es el nombre de la carpeta y ejemplo es el nombre del fichero dentro de la carpeta index -->
+        <route id="leccion2id" frontName="leccion2">
+            <module name="Hanhan_Leccion2"/>
+        </route>
+    </router>
+</config>
