@@ -3,4 +3,12 @@
     <module name="Hanhan_Leccion1" setup_version="0.0.1"/>
 </config>
 
-<!--los archivos xsd validan los elementos de los archivos xml. Mira si están bien escritos o no.  -->
+<!--
+Los archivos xsd validan los elementos de los archivos xml.
+En este caso el archivo que valida el module.xml es vendor/magento/framework/Module/etc/module.xsd
+En este archivo están las reglas que condicionan los elementos del module.xml. 
+Por ejemplo: el atributo name del elemento module tiene que cumplir este patrón: [A-Z]+[A-Za-z0-9]{1,}_[A-Z]+[A-Z0-9a-z]{1,}
+Es decir la primera letra en mayúscula y luego tiene que estar el guión _ seguido de una letra en mayúscula como Hanhan_Leccion
+Otro ejemplo es el elemento sequence, que es opcional y si sólo podemos poner uno y tiene que contener un elemento module y 
+opcionalmente más elementos de módulo. 
+-->
