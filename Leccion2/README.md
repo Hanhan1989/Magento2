@@ -1,21 +1,28 @@
 ## Lección 2 (Crear componentes)
 
-Acceso a una página customizada y rendenrizado de código json o template personalizado
+Acceso a una página customizada y rendenrizado de la página o template personalizado
 
 ````bash
 # Generar xml route para el frontname
 php pestle.phar magento2:generate:route
 
-# Generar layout xml , su template y block
+# Generar layout xml , su template phtml y block
 php pestle.phar generate_view
 ````
 Cada url , un fichero y en ese fichero, un método execute
 
 Hemos creado 2 rutas
 
-hanhan_leccion2/index/index sin template
-hanhan_leccion2/index/ejemplo con template
+````bash
+hanhan_leccion2/index/index o hanhan_leccion2/ sin template
+hanhan_leccion2/index/contemplatephtml con template
+````
 
-El id del route del frontname se pondrá como nombre en layout. Ej: leccion2id_index_ejemplo
+Las partes de la url son frontname/nombreCarpetaController/nombreDelFicheroEnLaCarpetaController. En otras palabras, esto es, frontname_controllerName_actionName.
 
-Las partes de la url son frontname_nombreCarpetaController_nombreDelFichero
+Si queremos renderizar la página con template, el id del route del frontname se pondrá como nombre del layout. Ej: hanhan_leccion2_index_contemplatephtml
+
+Las partes del nombre del layout son idfrontname_controllername_actionname.
+
+Cuando entramos en la url por ejemplo hanhan_leccion2/index/contemplatephtml el action devuelve el objeto \Magento\Framework\View\Result\PageFactory y este objeto asocia la url con su layout correspondiente. Luego el layout asocia el bloque y el phtml.
+Así pues  tendremos el url-block-phtml todo conectado. 
