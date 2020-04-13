@@ -29,3 +29,23 @@ Si queremos renderizar la página con template, el id del route del frontname se
 
 Cuando entramos en la url por ejemplo hanhan_leccion2/index/contemplatephtml el action devuelve el objeto \Magento\Framework\View\Result\PageFactory y este objeto asocia la url con su layout correspondiente. Luego el layout asocia el bloque y el phtml.
 Así pues  tendremos el url-block-phtml todo conectado. 
+
+### Action class admite los siguientes tipos de objetos de Result
+
+El Action class debe retornar un objeto Result
+
+- json: Sets Content-Type:application/json in the header and returns a json encoded representation of an array with data
+
+- raw: Returns the data as it’s been set. Does not set a Content-Type in the header
+
+- redirect: Creates an external redirect, which the browser follows and requests a new url
+
+- forward: Internally calls the execute method of another action class and does not trigger a new request from the browser. The URL stays the same
+
+- layout: View result. You can use a generic layout response to render any kind of layout. The layout comprises a response body from its layout elements and sets it to the HTTP response
+
+- page: View result. Encapsulates page type, page configuration, and imposes certain layout handles. page triggers layout.xml to render into HTML
+
+### Referencias
+
+- https://devdocs.magento.com/guides/v2.3/extension-dev-guide/routing.html
