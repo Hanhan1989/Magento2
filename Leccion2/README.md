@@ -18,6 +18,7 @@ Hemos creado 2 rutas
 hanhan_leccion2/index/index o hanhan_leccion2/ sin template
 hanhan_leccion2/index/contemplatephtml con template
 hanhan_leccion2/index/salidadatosjson con salida de datos en formato json
+hanhan_leccion2/index/salidarawdata con salida de datos sin formato.
 ````
 
 Las partes de la url son frontname/nombreCarpetaController/nombreDelFicheroEnLaCarpetaController. En otras palabras, esto es, frontname_controllerName_actionName.
