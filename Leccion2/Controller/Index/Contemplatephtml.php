@@ -29,7 +29,10 @@ class Contemplatephtml extends \Magento\Framework\App\Action\Action
      * 
      */
     public function execute()
-    {
-        return $this->resultPageFactory->create();
+    { 
+        $pageObject = $this->resultPageFactory->create();
+        // Devuelve un objeto de la clase Magento\Framework\View\Result\Page
+        // O sea la factoría resultPageFactory ha fabricado un objeto del tipo Page
+        return $pageObject;
     }
 }
