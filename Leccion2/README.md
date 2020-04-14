@@ -21,6 +21,7 @@ hanhan_leccion2/index/salidadatosjson con salida de datos en formato json
 hanhan_leccion2/index/salidarawdata con salida de datos sin formato
 hanhan_leccion2/index/redirecttohome redireccionar a la página externa ó página home
 hanhan_leccion2/index/forwardredirect redireccionar a una página interna de magento sin cambiar de url
+hanhan_leccion2/index/devolverbloquelayout Invocar método de un block en el controlador
 ````
 
 Las partes de la url son frontname/nombreCarpetaController/nombreDelFicheroEnLaCarpetaController. En otras palabras, esto es, frontname_controllerName_actionName.
