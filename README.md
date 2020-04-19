@@ -4,40 +4,11 @@
 
 Creación de un módulo
 
-````bash
-# Generar módulo
-php pestle.phar magento2:generate:module Hanhan Leccion1 0.0.1
-
-# Activar módulo y limpiar los estáticos
-php bin/magento module:enable Hanhan_Leccion1 --clear-static-content
-
-# Actualizar base de datos
-php bin/magento setup:upgrade
-
-# Regenerar los estáticos
-php bin/magento setup:di:compile
-
-````
-
 ## Lección 2 (Crear componentes)
 
 Acceso a una página customizada y rendenrizado de código json o template personalizado
 
-````bash
-# Generar xml route para el frontname
-php pestle.phar magento2:generate:route
-
-# Generar layout xml , su template y block
-php pestle.phar generate_view
-````
-Cada url , un fichero y en ese fichero, un método execute
-
-Hemos creado 2 rutas
-
-leccion2/index/index sin template
-eccion2/index/ejemplo con template
-
-El id del route del frontname se pondrá como nombre en layout. Ej: leccion2id_index_ejemplo
+Crear Controllers
 
 ### Crear helper
 
