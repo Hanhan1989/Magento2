@@ -20,7 +20,7 @@
                                                                 <item name="telephone" xsi:type="array">
                                                                     <item name="config" xsi:type="array">
                                                                         <!-- Assigning a new template -->
-                                                                        <item name="elementTmpl" xsi:type="string">Hanhan_Leccion3/form/element/telephone</item>
+                                                                        <item name="elementTmpl" xsi:type="string">Hanhan_Leccion4/form/element/telephone</item>
                                                                     </item>
                                                                 </item>
                                                             </item>
