@@ -21,6 +21,9 @@
                                                                     <item name="config" xsi:type="array">
                                                                         <!-- Assigning a new template -->
                                                                         <item name="elementTmpl" xsi:type="string">Hanhan_Leccion4/form/element/telephone</item>
+                                                                        <item name="tooltip" xsi:type="array">
+                                                                            <item name="description" xsi:type="string" translate="true">Leccion 4</item>
+                                                                        </item>
                                                                     </item>
                                                                 </item>
                                                             </item>
