@@ -8,64 +8,39 @@ Creación de un módulo
 
 Acceso a una página customizada y rendenrizado de código json o template personalizado
 
-Crear Controllers
+## Lección 3 
 
-### Crear helper
+Validación del código postal
 
-Se crea un fichero `Helper/Data.php` en el módulo.
+## Lección 4
 
-Se recomienda usar el helper en el bloque inyectando en el constructor. Y luego a través de este bloque, usar los métodos del helper en templates (phtml).
+Customizar campos de address del checkout
 
-Sin embargo si queremos usarlo en los templates como instancias independientes en vez de como objeto singleton, 
-podemos usar lo siguiente
+## Leccion 5
 
-````php 
-$object_manager = \Magento\Core\Model\ObjectManager::getInstance();
-$helper_factory = $object_manager->get('\Magento\Core\Model\Factory\Helper');
-$helper = $helper_factory->get('\Magento\Core\Helper\Data');
-````
+Migrar schema y datos a la bbdd
 
-### Crear modelo
+## Leccion 6
 
-````bash
-# Nos genera todos los ficheros necesarios para crear crud de tabla customizada
-php pestle.phar magento2:generate:crud-model
-````
-- El fichero InstallSchema.php y InstallData.php: contiene sentencias sql y sirve para crear el esquema de la bbdd. El fichero InstallData.php sirve para cargar datos a la bbdd. Sólo se ejecutan una vez, cuando se instala el módulo. Si queremos reinstalar el módulo debemos eliminar la fila de nuestro módulo en la tabla `setup_module` , eliminar las tablas instaladas por ese módulo y finalmente ejecutar `setup:upgrade`
+Incluir layout y links en todas las páginas
 
-Observaciones: 
-- Después de crear el modelo, ejecutamos magento setup:di:compile. Podemos ver, por dicha ejecución, se han generado ficheros en la carpeta `generated/code`, entre las carpetas está nuestro módulo `Hanhan/Leccion ` y podemos encontrar este fichero `Model/EntradaFactory.php`
 
-Recuerda eliminar *manualmente*:
- - rm -rf generated
- - rm -rf generate/metadata
 
-## Lección 3 (Rewrites)
 
-Rewrites de controllers, blocks, helpers y plugins
 
-### Helpers
 
-Tenemos que crear un fichero en etc/di.xml del módulo  y debemos poner el siguiente código, que mapea clases. 
 
-````xml
-<?xml version="1.0"?>
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-	<preference for="Hanhan\Leccion2\Helper\Data" type="Hanhan\Leccion3\Helper\Data"/>
-</config>
-````
 
-Dependiendo de lo que queremos reescribir poner preference o plugin. En el atributo for, ponemos la ruta a la clase helper que queremos reescribir y type, ponemos la ruta a la clase helper que extenderá de la original.
 
-NO tenemos que olvidar de extender la clase original en la clase hijo. 
+
+
+
+
 
 
 ## Composer
 
 - Si queremos usar nuestro repositorio en github para el composer, se hace de la siguiente manera. Recordar tener instaldo el git
-
-
-
 
 ````bash
     "require-dev": {
