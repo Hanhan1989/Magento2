@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema_instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+	    <add id="Hanhan_Leccion7::menu_0" title="Menu 0" module="Hanhan_Leccion7"
+             resource="Hanhan_Leccion7::menu_0"/>
+        <add id="Hanhan_Leccion7::menu_1" title="Menu 1" module="Hanhan_Leccion7"
+             parent="Hanhan_Leccion7::menu_0" resource="Hanhan_Leccion7::menu_1"/>
+ 	</menu>
+</config>

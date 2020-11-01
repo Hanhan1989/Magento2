@@ -24,15 +24,9 @@ Migrar schema y datos a la bbdd
 
 Incluir layout y links en todas las páginas
 
+## Leccion 7
 
-
-
-
-
-
-
-
-
+Crear menú del backoffice
 
 
 
